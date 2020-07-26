@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BeatCovidSupplier</string>
+    <string name="covid_supplies_in_stock">Covid Supplies in Stock</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+</resources>

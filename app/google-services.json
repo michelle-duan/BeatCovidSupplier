@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1012059200267",
+    "firebase_url": "https://beatcovidsupplier-16a46.firebaseio.com",
+    "project_id": "beatcovidsupplier-16a46",
+    "storage_bucket": "beatcovidsupplier-16a46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012059200267:android:a2b653508a508bf011a00e",
+        "android_client_info": {
+          "package_name": "com.michelleduan.beatcovidsupplier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012059200267-uarmsekt5rjs6u1in5p6egdsqdnef20c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.michelleduan.beatcovidsupplier",
+            "certificate_hash": "092bfe18b6131cb7179fadaea221abb860a9b72e"
+          }
+        },
+        {
+          "client_id": "1012059200267-gksvd24vbbacmkqnjr81nljvucsggo8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh3iSL2CHfmh23nh7l66rzjTIuUy2hgzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012059200267-gksvd24vbbacmkqnjr81nljvucsggo8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
