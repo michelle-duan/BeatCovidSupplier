@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BeatCovidSupplier</string>
+    <string name="covid_supplies_in_stock">Covid Supplies in Stock</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="username">Username</string>
+    <string name="log_out">Log Out</string>
+</resources>
