@@ -12,4 +12,5 @@
     <string name="log_out">Log Out</string>
     <string name="admin_login">Admin Login</string>
     <string name="i_m_not_an_admin">I\'m not an Admin?</string>
+    <string name="add_new_product">Add New Product</string>
 </resources>

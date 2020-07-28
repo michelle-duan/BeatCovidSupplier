@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCategoryActivity">
+
+    <TextView
+        android:id="@+id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="@string/add_new_product"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+    
+    <LinearLayout
+        android:id="@+id/linear1_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_category"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp">
+
+        <ImageView
+            android:id="@+id/kn95mask"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/kn95mask" />
+
+        <ImageView
+            android:id="@+id/regularmask"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/regularmask" />
+
+        <ImageView
+            android:id="@+id/thermometer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/thermometer" />
+
+        <ImageView
+            android:id="@+id/gloves"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/gloves" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1_category_layout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp">
+
+        <ImageView
+            android:id="@+id/noncontactthermometer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/noncontactthermometer" />
+
+        <ImageView
+            android:id="@+id/glasses"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/glasses" />
+
+        <ImageView
+            android:id="@+id/isolationmask"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/isolationmask" />
+
+        <ImageView
+            android:id="@+id/cleargloves"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cleargloves" />
+    </LinearLayout>
+</RelativeLayout>
