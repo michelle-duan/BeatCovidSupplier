@@ -10,4 +10,6 @@
     <string name="create_account">Create Account</string>
     <string name="username">Username</string>
     <string name="log_out">Log Out</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="i_m_not_an_admin">I\'m not an Admin?</string>
 </resources>
