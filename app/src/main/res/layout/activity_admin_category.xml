@@ -17,7 +17,7 @@
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold" />
-    
+
     <LinearLayout
         android:id="@+id/linear1_category_layout"
         android:layout_width="match_parent"

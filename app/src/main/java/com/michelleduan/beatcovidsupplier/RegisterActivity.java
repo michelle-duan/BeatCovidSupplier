@@ -83,7 +83,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-
     private void ValidateUsername(final String username, final String email, final String password)
     {
         final DatabaseReference RootRef;
