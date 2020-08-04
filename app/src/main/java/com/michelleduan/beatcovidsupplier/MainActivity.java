@@ -80,12 +80,13 @@ public class MainActivity extends AppCompatActivity {
                 if (snapshot.child("Users").child(username).exists()){
                     Users usersData = snapshot.child("Users").child(username).getValue(Users.class);
 
-                    if (usersData.getUsername().equals(username)){
+                    if (usersData.getName().equals(username)){
                         if (usersData.getPassword().equals(password)){
                             Toast.makeText(MainActivity.this, "Already Logged in", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Prevalent.currentOnlineUser = usersData;
                             startActivity(intent);
                         }else{
                             loadingBar.dismiss();
