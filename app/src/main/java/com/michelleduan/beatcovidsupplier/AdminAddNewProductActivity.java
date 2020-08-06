@@ -52,7 +52,6 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         Toast.makeText(this, "Welcome Admin", Toast.LENGTH_SHORT).show();
 
         CategoryName = getIntent().getExtras().get("category").toString();
-        Toast.makeText(this, CategoryName, Toast.LENGTH_SHORT) .show();
 
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");

@@ -13,4 +13,9 @@
     <string name="admin_login">Admin Login</string>
     <string name="i_m_not_an_admin">I\'m not an Admin?</string>
     <string name="add_new_product">Add New Product</string>
+    <string name="to_add_a_new_product_please_chose_and_click_a_category_the_new_product_belongs_to">To add a new product, please chose and click a category the new product belongs to:</string>
+    <string name="enter_product_name">Enter product name</string>
+    <string name="enter_product_description">Enter product description</string>
+    <string name="enter_product_price">Enter product price</string>
+    <string name="add_product">Add Product</string>
 </resources>

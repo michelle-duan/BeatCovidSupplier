@@ -20,7 +20,8 @@ public class AdminCategoryActivity extends AppCompatActivity {
         facemask = (ImageView)findViewById(R.id.facemask);
         gloves = (ImageView)findViewById(R.id.gloves);
         thermometer = (ImageView)findViewById(R.id.thermometer);
-        glasses = (ImageView)findViewById(R.id.glasses);
+        glasses = (ImageView)findViewById(R.id
+                .glasses);
         isolationmask = (ImageView)findViewById(R.id.isolationmask);
         others = (ImageView)findViewById(R.id.otherproducts);
 

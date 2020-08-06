@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:text="@string/add_new_product"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/to_add_a_new_product_please_chose_and_click_a_category_the_new_product_belongs_to"
         android:textAlignment="center"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:id="@+id/linear1_category_layout"
@@ -26,19 +26,19 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
-            android:id="@+id/kn95mask"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/kn95mask" />
-
-        <ImageView
-            android:id="@+id/regularmask"
+            android:id="@+id/facemask"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/regularmask" />
+
+        <ImageView
+            android:id="@+id/gloves"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/gloves" />
 
         <ImageView
             android:id="@+id/thermometer"
@@ -47,10 +47,11 @@
             android:src="@drawable/thermometer" />
 
         <ImageView
-            android:id="@+id/gloves"
+            android:id="@+id/glasses"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/gloves" />
+            android:layout_height="64dp"
+            android:src="@drawable/glasses" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -64,27 +65,15 @@
         android:layout_marginTop="45dp">
 
         <ImageView
-            android:id="@+id/noncontactthermometer"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/noncontactthermometer" />
-
-        <ImageView
-            android:id="@+id/glasses"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/glasses" />
-
-        <ImageView
             android:id="@+id/isolationmask"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/isolationmask" />
 
         <ImageView
-            android:id="@+id/cleargloves"
+            android:id="@+id/otherproducts"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/cleargloves" />
+            android:layout_height="64dp"
+            android:src="@drawable/otherproducts" />
     </LinearLayout>
 </RelativeLayout>
