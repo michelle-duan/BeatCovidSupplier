@@ -9,8 +9,7 @@ import android.widget.ImageView;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
-    private ImageView kn95mask, regularmask, thermometer, gloves;
-    private ImageView cleargloves, glasses,isolationmask;
+    private ImageView facemask, gloves, thermometer, glasses,isolationmask, others;
 
 
     @Override
@@ -18,28 +17,27 @@ public class AdminCategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
 
-        kn95mask = (ImageView)findViewById(R.id.kn95mask);
-        regularmask = (ImageView)findViewById(R.id.regularmask);
-        thermometer = (ImageView)findViewById(R.id.thermometer);
+        facemask = (ImageView)findViewById(R.id.facemask);
         gloves = (ImageView)findViewById(R.id.gloves);
-        cleargloves = (ImageView)findViewById(R.id.cleargloves);
+        thermometer = (ImageView)findViewById(R.id.thermometer);
         glasses = (ImageView)findViewById(R.id.glasses);
         isolationmask = (ImageView)findViewById(R.id.isolationmask);
+        others = (ImageView)findViewById(R.id.otherproducts);
 
-        kn95mask.setOnClickListener(new View.OnClickListener() {
+        facemask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","N95 Mask");
+                intent.putExtra("category","Face Mask");
                 startActivity(intent);
             }
         });
 
-        regularmask.setOnClickListener(new View.OnClickListener() {
+        gloves.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Regular Mask");
+                intent.putExtra("category","Gloves");
                 startActivity(intent);
             }
         });
@@ -49,24 +47,6 @@ public class AdminCategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
                 intent.putExtra("category","Thermometer");
-                startActivity(intent);
-            }
-        });
-
-        gloves.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Gloves ");
-                startActivity(intent);
-            }
-        });
-
-        cleargloves.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Clear Gloves");
                 startActivity(intent);
             }
         });
@@ -85,6 +65,15 @@ public class AdminCategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
                 intent.putExtra("category","Isolation Mask");
+                startActivity(intent);
+            }
+        });
+
+        others.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
+                intent.putExtra("category","Other Products");
                 startActivity(intent);
             }
         });
