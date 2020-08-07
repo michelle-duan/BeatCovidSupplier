@@ -101,10 +101,10 @@ public class LoginActivity extends AppCompatActivity
         }
         else
         {
-            loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("Logging in");
-            loadingBar.setCanceledOnTouchOutside(false);
-            loadingBar.show();
+//            loadingBar.setTitle("...");
+//            loadingBar.setMessage("...");
+//            loadingBar.setCanceledOnTouchOutside(false);
+//            loadingBar.show();
 
 
             AllowAccessToAccount(username, password);
@@ -138,15 +138,14 @@ public class LoginActivity extends AppCompatActivity
                     {
                         if (usersData.getPassword().equals(password)) {
                             if (parentDbName.equals("Admins")){
-                                Toast.makeText(LoginActivity.this, "Welcome admin, you're logged in successfully", Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
+//                                Toast.makeText(LoginActivity.this, "Welcome admin, you're logged in successfully", Toast.LENGTH_SHORT).show();
+//                                loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
                                 startActivity(intent);
 
                             }else if(parentDbName.equals("Users")){
-                                Toast.makeText(LoginActivity.this, "logged in Successfully", Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
+//                                loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
@@ -155,7 +154,7 @@ public class LoginActivity extends AppCompatActivity
                         }
                         else
                         {
-                            loadingBar.dismiss();
+//                            loadingBar.dismiss();
                             Toast.makeText(LoginActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -163,7 +162,7 @@ public class LoginActivity extends AppCompatActivity
                 else
                 {
                     Toast.makeText(LoginActivity.this, "This is no account under this username.", Toast.LENGTH_SHORT).show();
-                    loadingBar.dismiss();
+//                    loadingBar.dismiss();
                 }
             }
 
