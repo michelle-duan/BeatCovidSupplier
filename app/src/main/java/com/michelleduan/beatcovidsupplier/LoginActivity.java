@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,7 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.rey.material.widget.CheckBox;
+
 
 import io.paperdb.Paper;
 
@@ -32,9 +33,9 @@ public class LoginActivity extends AppCompatActivity
     private TextView AdminLink, NotAdminLink;
 
     private String parentDbName = "Users";
-    private CheckBox chkBoxRememberMe;
+//    private CheckBox chkBoxRememberMe;
 
-
+    private com.rey.material.widget.CheckBox chkBoxRememberMe;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -50,7 +51,7 @@ public class LoginActivity extends AppCompatActivity
         loadingBar = new ProgressDialog(this);
 
 
-        chkBoxRememberMe = (CheckBox) findViewById(R.id.remember_me_chkb);
+        chkBoxRememberMe = (com.rey.material.widget.CheckBox) findViewById(R.id.remember_me_chkb);
         Paper.init(this);
 
 
