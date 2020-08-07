@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(UsernameKey) && !TextUtils.isEmpty(UsernameKey)){
                 AllowAccess(UsernameKey, UserPasswordKey);
 
-                loadingBar.setTitle("Already logged in");
-                loadingBar.setMessage("Logging in");
-                loadingBar.setCanceledOnTouchOutside(false);
-                loadingBar.show();
+//                loadingBar.setTitle("Already logged in");
+//                loadingBar.setMessage("Logging in");
+//                loadingBar.setCanceledOnTouchOutside(false);
+//                loadingBar.show();
             }
         }
     }
@@ -82,20 +82,20 @@ public class MainActivity extends AppCompatActivity {
 
                     if (usersData.getUsername().equals(username)){
                         if (usersData.getPassword().equals(password)){
-                            Toast.makeText(MainActivity.this, "Already Logged in", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
+//                            Toast.makeText(MainActivity.this, "Already Logged in", Toast.LENGTH_SHORT).show();
+//                            loadingBar.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             Prevalent.currentOnlineUser = usersData;
                             startActivity(intent);
                         }else{
-                            loadingBar.dismiss();
-                            Toast.makeText(MainActivity.this, "Password is incorrect", Toast.LENGTH_SHORT).show();
+//                            loadingBar.dismiss();
+                            Toast.makeText(MainActivity.this, "Incorrect password", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }else{
                     Toast.makeText(MainActivity.this, "This is no account under this username.", Toast.LENGTH_SHORT).show();
-                    loadingBar.dismiss();
+//                    loadingBar.dismiss();
                 }
             }
 
