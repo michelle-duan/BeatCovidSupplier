@@ -49,19 +49,19 @@ public class CartActivity extends AppCompatActivity {
         NextProcessBtn = (Button) findViewById(R.id.next_btn);
         txtTotalAmount = (TextView) findViewById(R.id.total_price);
 //        txtMsg1 = (TextView) findViewById(R.id.msg1);
+        txtTotalAmount.setText("Total Price= $" + String.valueOf(overTotalPrice));
 
         NextProcessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtTotalAmount.setText("Total Price= $" + String.valueOf(overTotalPrice));
 
+                txtTotalAmount.setText("Total Price= $" + String.valueOf(overTotalPrice));
                 Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
             }
         });
-
     }
 
     @Override
