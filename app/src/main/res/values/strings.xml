@@ -43,4 +43,5 @@
     <string name="enter_full_name">Enter Full Name</string>
     <string name="enter_address">Enter Address</string>
     <string name="product_name_details">Product Name Details</string>
+    <string name="add_to_cart">Add to Cart</string>
 </resources>
