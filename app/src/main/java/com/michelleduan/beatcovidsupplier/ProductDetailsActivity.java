@@ -61,6 +61,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     Toast.makeText(ProductDetailsActivity.this, "You can order again once your order is shipped", Toast.LENGTH_LONG);
                 }
                 else{
+
                     addToCart();
                 }
             }
