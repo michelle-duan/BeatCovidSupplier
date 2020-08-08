@@ -42,12 +42,15 @@ public class HomeActivity extends AppCompatActivity
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    private String type = "";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        type = getIntent().getExtras().get("Admin").toString();
 
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
@@ -115,12 +118,21 @@ public class HomeActivity extends AppCompatActivity
                         holder.txtProductPrice.setText("$" + model.getPrice());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
+
+
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Intent intent = new Intent(HomeActivity.this, ProductDetailsActivity.class);
-                                intent.putExtra("pid", model.getPid());
-                                startActivity(intent);
+
+                                if(type.equals("Admin")) {
+
+                                }
+                                else {
+
+                                    Intent intent = new Intent(HomeActivity.this, ProductDetailsActivity.class);
+                                    intent.putExtra("pid", model.getPid());
+                                    startActivity(intent);
+                                }
                             }
                         });
                     }

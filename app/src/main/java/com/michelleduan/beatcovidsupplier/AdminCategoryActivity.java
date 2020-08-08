@@ -12,13 +12,15 @@ public class AdminCategoryActivity extends AppCompatActivity {
 
     private ImageView facemask, gloves, thermometer, glasses,isolationmask, others;
 
-    private Button LogoutBtn, CheckOrdersBtn;
+    private Button LogoutBtn, CheckOrdersBtn, maintainProductsBtn;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
+
 
         facemask = (ImageView)findViewById(R.id.facemask);
         gloves = (ImageView)findViewById(R.id.gloves);
@@ -29,7 +31,18 @@ public class AdminCategoryActivity extends AppCompatActivity {
         others = (ImageView)findViewById(R.id.otherproducts);
         LogoutBtn = (Button) findViewById(R.id.admin_logout_btn);
         CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
+        maintainProductsBtn = findViewById(R.id.maintain_btn);
         others = (ImageView)findViewById(R.id.otherproducts);
+
+
+        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
+                intent.putExtra("Admin","Admin");
+                startActivity(intent);
+            }
+        });
 
         facemask.setOnClickListener(new View.OnClickListener() {
             @Override
