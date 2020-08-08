@@ -58,7 +58,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (state.equals("Order Shipped") || state.equals("Order Placed")) {
-                    Toast.makeText(ProductDetailsActivity.this, "You can order again once your order is shipped", Toast.LENGTH_LONG);
+                    Toast.makeText(ProductDetailsActivity.this, "You can order again once your order is shipped", Toast.LENGTH_LONG).show();
                 }
                 else{
                     addToCart();
@@ -101,7 +101,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    cartListRef.child("User View").child(Prevalent.currentOnlineUser.getUsername()).child("Products").child(productID)
+                    cartListRef.child("Admin View").child(Prevalent.currentOnlineUser.getUsername()).child("Products").child(productID)
                             .updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
