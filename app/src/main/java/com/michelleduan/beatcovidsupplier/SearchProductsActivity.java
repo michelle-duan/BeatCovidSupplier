@@ -60,7 +60,7 @@ public class SearchProductsActivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Products> options =
                 new FirebaseRecyclerOptions.Builder<Products>()
-                .setQuery(reference.orderByChild("pname"),Products.class).build();
+                .setQuery(reference.orderByChild("pname").startAt(SearchInput),Products.class).build();
 
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
                 new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
