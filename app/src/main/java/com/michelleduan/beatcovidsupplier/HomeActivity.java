@@ -50,7 +50,13 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        type = getIntent().getExtras().get("Admin").toString();
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        if(bundle!=null)
+        {
+            type = getIntent().getExtras().get("Admin").toString();
+        }
 
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
@@ -125,6 +131,9 @@ public class HomeActivity extends AppCompatActivity
                             public void onClick(View view) {
 
                                 if(type.equals("Admin")) {
+                                    Intent intent = new Intent(HomeActivity.this, AdminMaintainProductsActivity.class);
+                                    intent.putExtra("pid", model.getPid());
+                                    startActivity(intent);
 
                                 }
                                 else {
