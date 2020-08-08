@@ -73,8 +73,8 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                             public void onClick(View view) {
                                 CharSequence options[] = new CharSequence[]
                                         {
-                                                "Accept",
-                                                "Decline"
+                                                "Order Shipped",
+                                                "Order yet to be Shipped"
                                         };
                                 AlertDialog.Builder builder = new AlertDialog.Builder(AdminNewOrdersActivity.this);
                                 builder.setTitle("Have you shipped this order?");
