@@ -53,7 +53,7 @@ public class CartActivity extends AppCompatActivity {
         txtTotalAmount = (TextView) findViewById(R.id.total_price);
         txtMsg1 = (TextView) findViewById(R.id.msg1);
 
-        txtTotalAmount.setText("Total Price= $" + String.valueOf(overTotalPrice));
+        txtTotalAmount.setText("Total Price= $" + overTotalPrice);
 
         NextProcessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +84,7 @@ public class CartActivity extends AppCompatActivity {
                         .build();
 
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter
-                = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
+                 = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
                 holder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
@@ -124,7 +124,7 @@ public class CartActivity extends AppCompatActivity {
                                                     if (task.isSuccessful()) {
                                                         Toast.makeText(CartActivity.this, "Item removed from cart successfully.", Toast.LENGTH_SHORT).show();
 
-                                                        Intent intent = new Intent(CartActivity.this, HomeActivity.class);
+                                                        Intent intent = new Intent(CartActivity.this, CartActivity.class);
                                                         startActivity(intent);
                                                     }
                                                 }

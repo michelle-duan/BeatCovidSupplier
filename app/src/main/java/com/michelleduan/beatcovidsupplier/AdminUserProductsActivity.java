@@ -45,7 +45,7 @@ public class AdminUserProductsActivity extends AppCompatActivity
 
 
         cartListRef = FirebaseDatabase.getInstance().getReference()
-                .child("Cart List").child("Admin View").child(userID).child("Products");
+                .child("Cart List").child("Admin View").child(userID ).child("Products");
     }
 
 

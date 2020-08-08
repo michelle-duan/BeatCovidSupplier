@@ -64,7 +64,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                                 String uID = getRef(position).getKey();
 
                                 Intent intent = new Intent(AdminNewOrdersActivity.this, AdminUserProductsActivity.class);
-                                intent.putExtra("uid", model.getPhone());
+                                intent.putExtra("uid", model.getName());
                                 startActivity(intent);
                             }
                         });
