@@ -75,7 +75,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         CheckOrderState();
     }
 
-    private void addToCart() {
+    private void addToCart()
+    {
         String saveCurrentTime, saveCurrentDate;
 
         Calendar calForDate = Calendar.getInstance();
@@ -96,26 +97,34 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("quantity", numberButton.getNumber());
         cartMap.put("discount", "");
 
-        cartListRef.child("User View").child(Prevalent.currentOnlineUser.getUsername()).child("Products").child(productID)
-                .updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    cartListRef.child("User View").child(Prevalent.currentOnlineUser.getUsername()).child("Products").child(productID)
-                            .updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(ProductDetailsActivity.this, "Added to Cart List.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(ProductDetailsActivity.this, HomeActivity.class);
-                                startActivity(intent);
-                            }
-                        }
-                    });
-                }
+        cartListRef.child("User View").child(Prevalent.currentOnlineUser.getUsername())
+                .child("Products").child(productID)
+                .updateChildren(cartMap)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task)
+                    {
+                        if (task.isSuccessful())
+                        {
+                            cartListRef.child("Admin View").child(Prevalent.currentOnlineUser.getUsername())
+                                    .child("Products").child(productID)
+                                    .updateChildren(cartMap)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task)
+                                        {
+                                            if (task.isSuccessful())
+                                            {
+                                                Toast.makeText(ProductDetailsActivity.this, "Added to Cart List.", Toast.LENGTH_SHORT).show();
 
-            }
-        });
+                                                Intent intent = new Intent(ProductDetailsActivity.this, HomeActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        }
+                                    });
+                        }
+                    }
+                });
     }
 
     private void getProductDetails(String productID) {
