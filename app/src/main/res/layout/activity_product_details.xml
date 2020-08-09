@@ -59,14 +59,14 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:elevation="6dp"
-        app:textSize="16sp"
+        app:textSize="8sp"
         app:textColor="@android:color/black"
         app:initialNumber="1"
         app:finalNumber="10"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/product_price_details"
         android:layout_marginTop="20dp"
-        >
+        tools:ignore="SmallSp">
     </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
     <Button
         android:id="@+id/pd_add_to_cart_button"

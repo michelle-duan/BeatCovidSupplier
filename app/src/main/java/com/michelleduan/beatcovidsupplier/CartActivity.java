@@ -53,7 +53,8 @@ public class CartActivity extends AppCompatActivity {
         txtTotalAmount = (TextView) findViewById(R.id.total_price);
         txtMsg1 = (TextView) findViewById(R.id.msg1);
 
-        txtTotalAmount.setText("Total Price= $" + String.valueOf(overTotalPrice));
+//        txtTotalAmount.setText("Total Price= $" + String.valueOf(overTotalPrice));
+        txtTotalAmount.setText("Shopping Cart");
 
         NextProcessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,7 +180,7 @@ public class CartActivity extends AppCompatActivity {
                     }
                     else if(shippingState.equals("not shipped"))
                     {
-                        txtTotalAmount.setText("Shipping State = Not Shipped");
+                        txtTotalAmount.setText("Order pending. Can't shop now.");
                         recyclerView.setVisibility(View.GONE);
 
                         txtMsg1.setVisibility(View.VISIBLE);
